@@ -1,0 +1,24 @@
+header {
+    width:100%;
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.sector {
+    width:100%;
+    min-height: 80px;
+    display: block;
+    padding-left:40px;
+    padding-right: 40px;
+}
+
+
+._logoside {
+    vertical-align: middle;
+}
+
+._logocontainer {
+    display: inline-block;
+}
+
