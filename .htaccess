@@ -1,2 +1,7 @@
 AddDefaultCharset UTF-8
 ErrorDocument 404 /404.html
+
+RewriteEngine On
+
+RewriteRule ^last$ last_activity.php
+RewriteRule ^signup$ signup.php

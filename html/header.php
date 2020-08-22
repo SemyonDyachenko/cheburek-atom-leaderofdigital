@@ -1,22 +1,13 @@
-<header class="container">
-    <div class="sector">
-
-
-        <div class="_logoside">
-            <div class="_logocontainer">
-                <a href="/">
-                    <h2>Sports MeetUp</h2>
-                </a>
-            </div>
+<header class="grid container jc-sb ai-c">
+        <div class="container ai-c">
+            <div id="logo"><a href="/">Sport Meetups</a></div>
+            <nav>
+                <ul class="container">
+                    <li><a href="/">Новости спорта</a></li>
+                    <li><a href="last_activity.php">Последние события</a></li>
+                    <li><a href="#">Поиск событий</a></li>
+                </ul>
+            </nav>
         </div>
-
-        <div class='_menuside'>
-
-        <div>
-
-
-        <div class="_clientside">
-
-        </div>
-    </div>  
-</header>
+        <div id="user-auth"><a href="signup_activity.php">Зарегистрироваться</a></div>
+    </header>

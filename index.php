@@ -14,19 +14,7 @@
 </head>
 <body>
 <div id="page">
-    <header class="grid container jc-sb ai-c">
-        <div class="container ai-c">
-            <div id="logo"><a href="/">Sport Meetups</a></div>
-            <nav>
-                <ul class="container">
-                    <li><a href="#">Новости спорта</a></li>
-                    <li><a href="#">Последние события</a></li>
-                    <li><a href="#">Поиск событий</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div id="user-auth"><a href="#">Зарегистрироваться</a></div>
-    </header>
+    <?php require 'html/header.php'; ?>
     <section id="content" class="container jc-sb maket__grid">
         <div id="main-content">
             <div class="section-item" id="last-news">
@@ -34,27 +22,27 @@
                 <div class="section-content">
                     <article>
                         <div class="image">
-                            <img src="resource/article.png" alt="article image">
+                            <img src="resource/article.jpg" alt="article image">
                         </div>
-                        <div class="title"><a href="#">Blue Origin показала прототип посадочного модуля на Луну для NASA</a></div>
+                        <div class="title"><a href="#">Футбольный матч ФК "СОЧИ" VS ФК "РОСТОВ" пройдет 19 июня в 19:55.</a></div>
                     </article>
                     <article>
                         <div class="image">
-                            <img src="resource/article.png" alt="article image">
+                            <img src="resource/article.jpg" alt="article image">
                         </div>
-                        <div class="title"><a href="#">Blue Origin показала прототип посадочного модуля на Луну для NASA</a></div>
+                        <div class="title"><a href="#">Футбольный матч ФК "СОЧИ" VS ФК "РОСТОВ" пройдет 19 июня в 19:55.</a></div>
                     </article>
                     <article>
                         <div class="image">
-                            <img src="resource/article.png" alt="article image">
+                            <img src="resource/article.jpg" alt="article image">
                         </div>
-                        <div class="title"><a href="#">Blue Origin показала прототип посадочного модуля на Луну для NASA</a></div>
+                        <div class="title"><a href="#">Футбольный матч ФК "СОЧИ" VS ФК "РОСТОВ" пройдет 19 июня в 19:55.</a></div>
                     </article>
                     <article>
                         <div class="image">
-                            <img src="resource/article.png" alt="article image">
+                            <img src="resource/article.jpg" alt="article image">
                         </div>
-                        <div class="title"><a href="#">Blue Origin показала прототип посадочного модуля на Луну для NASA</a></div>
+                        <div class="title"><a href="#">Футбольный матч ФК "СОЧИ" VS ФК "РОСТОВ" пройдет 19 июня в 19:55.</a></div>
                     </article>
                 </div>
             </div>
@@ -62,7 +50,7 @@
         <div id="sidebar">
             <div id="sidebar-content">
                 <div class="title">
-                    <p>Актуальные заголовки</p>
+                    <p>Недавние новости</p>
                     <span class="delimiter"></span>
                 </div>
                 <div class="info-news item">
@@ -80,9 +68,7 @@
             </div>
         </div>
     </section>
-    <footer class="grid">
-        Chebyrek 2020, all rights reserved.
-    </footer>
+   <?php require 'html/footer.php'; ?>
 </div>
 <script>
 $(function() {
