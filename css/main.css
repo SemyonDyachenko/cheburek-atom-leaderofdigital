@@ -148,11 +148,13 @@ header #user-auth a:hover {
 }
 
 #content #main-content #last-news article .title {
-    margin-top: 9px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 18px;
-    letter-spacing: 1px;
+    margin-top: 14px;
+    font-family: 'Roboto',sans-serif;
+    font-size: 24px;
+    letter-spacing: 0.5px;
     line-height: 25px;
+    font-weight: 700;
+    color:rgb(75, 75, 75);
 }
 
 #content #main-content #last-news article .title a {
