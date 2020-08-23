@@ -1,7 +1,22 @@
-AddDefaultCharset UTF-8
-ErrorDocument 404 /404.html
 
-RewriteEngine On
+# HTID:12105474: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
+php_value display_errors 1
+# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:12105474:
 
-RewriteRule ^last$ last_activity.php
-RewriteRule ^signup$ signup.php
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

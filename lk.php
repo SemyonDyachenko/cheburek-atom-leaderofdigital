@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <title>pfcsochi</title>
+    <title>Личный кабинет</title>
     <meta charset="UTF-8">
 
     <!-- Connections -->
@@ -14,36 +14,60 @@
 </head>
 <body>
 <div id="page">
- <?php require 'html/header.php'; ?>
-    <section id="content" class="container jc-sb maket__grid">
+   <?php require 'html/header.php';?>
+  <?php
+  if (!isset($_COOKIE['login'])&&!isset($_COOKIE['password'])){
+      ?>
+    <div class="regcontainer">
+	            <form id="form" action="">
+	                <div class="inputcontainer">
+                    <div class="input"><input type="radio" name="class" value="customers"></div>
+	                <div class="label">Болельщик</div>
+                    </div>
+	                <div class="inputcontainer">
+                    <div class="input"><input type="radio" name="class" value="teams"></div>
+	                <div class="label">Команда</div>
+                    </div>
+	                <div class="inputcontainer">
+	                <div class="label">Логин:</div>
+                    <div class="input"><input type="text" name="username"></div>
+                    </div>
+                    <div class="inputcontainer">
+                    <div class="label">Пароль:</div>
+                    <div class="input"><input type="password" name="password"></div>
+                    <div class="input"><input type="submit"></div>
+                    </div>
+	            </form>
+	        </div>
+	<script>
+	$( document ).ready(function(){
+	    $('#form').on('submit', function (e){
+	       e.preventDefault();
+	       $.ajax({
+	           method: 'POST',
+	           url: 'controller-auth.php',
+	           data: $(this).serialize(),
+	           success: function(message){
+	               if(message==1){
+	                   $('.regcontainer').fadeOut('slow');
+	                   window.location.reload();
+	               }
+	           }
+	       }); 
+	    });
+	});
+	</script>
+	
+	<?php
+  }else{
+      ?>
+      
+      <section id="content" class="container jc-sb maket__grid">
         <div id="main-content">
             <div class="section-item" id="last-news">
-                <div class="section-title">Последние новости</div>
+                <div class="section-title"><? echo 'Добро пожаловать в личный кабинет, '.$_COOKIE['login']; ?></div>
                 <div class="section-content">
-                    <article>
-                        <div class="image">
-                            <img src="/img/article.png" alt="article image">
-                        </div>
-                        <div class="title"><a href="#">Blue Origin показала прототип посадочного модуля на Луну для NASA</a></div>
-                    </article>
-                    <article>
-                        <div class="image">
-                            <img src="/img/article.png" alt="article image">
-                        </div>
-                        <div class="title"><a href="#">Blue Origin показала прототип посадочного модуля на Луну для NASA</a></div>
-                    </article>
-                    <article>
-                        <div class="image">
-                            <img src="/img/article.png" alt="article image">
-                        </div>
-                        <div class="title"><a href="#">Blue Origin показала прототип посадочного модуля на Луну для NASA</a></div>
-                    </article>
-                    <article>
-                        <div class="image">
-                            <img src="/img/article.png" alt="article image">
-                        </div>
-                        <div class="title"><a href="#">Blue Origin показала прототип посадочного модуля на Луну для NASA</a></div>
-                    </article>
+                    
                 </div>
             </div>
         </div>
@@ -68,7 +92,13 @@
             </div>
         </div>
     </section>
-    <?php require 'html/footer.php'; ?>
+      
+<?php
+  }
+  
+  ?>
+	
+<?php require 'footer.php'; ?>
 </div>
 <script>
 $(function() {
@@ -85,5 +115,3 @@ $(function() {
     });
 });
 </script>
-</body>
-</html>

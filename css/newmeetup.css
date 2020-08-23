@@ -1,0 +1,97 @@
+body {
+    padding:0;
+    margin:0;
+    
+}
+
+#page {
+    width:100% !important;
+    min-height:100vh;
+    padding:0;
+    margin:0;
+}
+
+.new-meetup-section {
+    max-width:100%;
+}
+
+footer {
+    min-height: 125px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.1);
+    color: rgba(0,0,0,0.85);
+    margin-top: 75px;
+}
+
+
+
+.new-meetup-form {
+    max-width:100%;
+}
+
+.form-item {
+    display:flex;
+    justify-content:center;
+}
+
+.form-item h2 {
+    color: black;
+    font-family: 'Staatliches', cursive;
+    font-size: 46px;
+    text-decoration: none;
+}
+
+.form-item input {
+    min-width:550px;
+    min-height:44px;
+    margin:10px 0px;
+    box-sizing:border-box;
+    padding:5px;
+    font-size:18px;
+    border:none;
+    border-bottom:1px solid gray;
+    outline:none;
+    font-weight:500;
+}
+.form-item textarea {
+    min-width:550px;
+    min-height:55px;
+     margin:10px 0px;
+     font-size:18px;
+    resize:vertical;
+     box-sizing:border-box;
+    padding:5px;
+    border:none;
+    border-bottom:1px solid gray;
+    outline:none;
+    font-weight:500;
+}
+
+
+.upload-meetup-btn  {
+    margin-top:10px;
+    min-width:280px;
+    min-height:40px;
+     background: #002D4D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 12px 17px;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    position: relative;
+    border: 1px solid #002D4D;
+    transition-property: color, background;
+    transition-duration: 0.4s;;
+    font-size:17px;
+    cursor:pointer;
+}
+
+.upload-meetup-btn:hover {
+    color: #002D4D;;
+    background: white;
+}

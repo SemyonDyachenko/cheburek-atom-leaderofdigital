@@ -3,7 +3,7 @@
 /* reset.min.css <<< */
 
 /* grid.min.css >>> */
-.container{display:flex;flex-direction:row;align-items:flex-start;justify-content:flex-start}.container.vc{flex-direction:column}.container.ai-c{align-items:center}.container.jc-sb{justify-content:space-between}.container.jc-c{justify-content:center}.container.ai-fe{align-items:flex-end}.container.fw{width:100%}.container.fh{height:100%}.grid{padding:0 42px}.mgrid{margin:0 142px}.maket__grid{padding:0 50px}.mmaket__grid{margin:0 50px}
+.container{display:flex;flex-direction:row;align-items:flex-start;justify-content:flex-start}.container.vc{flex-direction:column}.container.ai-c{align-items:center}.container.jc-sb{justify-content:space-between}.container.jc-c{justify-content:center}.container.ai-fe{align-items:flex-end}.container.fw{width:100%}.container.fh{height:100%}.grid{padding:0 142px}.mgrid{margin:0 142px}.maket__grid{padding:0 50px}.mmaket__grid{margin:0 50px}
 /* grid.min.css <<< */
 
 /* >>> Common >>> */
@@ -43,7 +43,7 @@ header #logo a {
 header #logo a:hover {opacity: 0.7;}
 
 header nav {
-    margin: 0 90px;
+    margin: 0 30px;
 }
 
 header nav ul li:not(:first-child) {
@@ -124,6 +124,34 @@ header #user-auth a:hover {
     font-weight: bold;
 }
 
+#content #main-content .section-addnew {
+    margin-bottom:30px;
+    font-size:17px;
+    float:right;
+}
+
+.addnew-meetup {
+    background: #002D4D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 12px 17px;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    position: relative;
+    border: 1px solid #002D4D;
+    transition-property: color, background;
+    transition-duration: 0.4s;;
+}
+
+.addnew-meetup:hover {
+    color: #002D4D;;
+    background: white;
+
+}
+
 #content #main-content #last-news .section-content {
     display: flex;
     flex-wrap: wrap;
@@ -148,13 +176,11 @@ header #user-auth a:hover {
 }
 
 #content #main-content #last-news article .title {
-    margin-top: 14px;
-    font-family: 'Roboto',sans-serif;
-    font-size: 24px;
-    letter-spacing: 0.5px;
+    margin-top: 9px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    letter-spacing: 1px;
     line-height: 25px;
-    font-weight: 700;
-    color:rgb(75, 75, 75);
 }
 
 #content #main-content #last-news article .title a {
@@ -283,6 +309,156 @@ header #user-auth a:hover {
     height: 1px;
     background: #D3D3D3;
 }
+
+/* >>> Auth >>> */
+
+#content #auth {
+    width: 100%;
+}
+
+#content #auth #state {
+    margin-top: 45px;
+    font-size: 32px;
+}
+
+#content #auth #auth-form {
+    width: 100%;
+    margin-top: 45px;
+}
+
+#content #auth #auth-form form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#content #auth #auth-form form .category {
+    margin-bottom: 45px;
+}
+
+#content #auth #auth-form form .category ul {
+    display: flex;
+    font-size: 22px;
+}
+
+#content #auth #auth-form form .category ul li {
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#content #auth #auth-form form .category ul li:hover {
+    opacity: 0.7;
+}
+
+#content #auth #auth-form form .category ul li:not(:first-child) {
+    margin-left: 55px;
+}
+
+#content #auth #auth-form form .category ul li.active {
+    text-decoration: underline;
+}
+
+#content #auth #auth-form form input {
+    outline: none;
+    border: none;
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    border-bottom: 2px solid #002D4D;
+    padding: 15px 10px;
+    font-family: 'Open Sans', sans-serif;
+    background: rgba(150,150,150,0.1);
+    width: 550px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #002D4D;
+    transition: all 0.3s;
+}
+
+#content #auth #auth-form form input:focus {
+    border: 2px solid #4BB0F9;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+}
+
+#content #auth #auth-form form .if-isset {
+    margin-bottom: 45px;
+    width: 570px;
+    text-align: right;
+}
+
+#content #auth #auth-form form .if-isset a {
+    text-decoration: none;
+    color: #4BB0F9;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+#content #auth #auth-form form .if-isset a:hover {
+    color: #002D4D;
+}
+
+#content #auth #auth-form form button {
+    background: #002D4D;
+    color: white;
+    text-decoration: none;
+    border-radius: 100px;
+    padding: 12px 75px;
+    outline: none;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border: 1px solid #002D4D;
+    transition: all 0.4s;
+}
+
+#content #auth #auth-form form button:hover {
+    background: white;
+    color: #002D4D;
+}
+
+#content #auth #auth-form form .social-auth {
+    margin-top: 45px;
+}
+
+#content #auth #auth-form form .social-auth .social-button.vk a {
+    background: #5181B8;
+}
+
+#content #auth #auth-form form .social-auth .social-button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    padding: 12px 45px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+#content #auth #auth-form form .social-auth .social-button a:hover {
+    opacity: 0.8;
+}
+
+#content #auth #auth-form form .policy-agreement {
+    margin-top: 25px;
+}
+
+#content #auth #auth-form form .policy-agreement a {
+    text-decoration: none;
+    color: #4BB0F9;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+#content #auth #auth-form form .policy-agreement a:hover {
+    color: #002D4D;
+}
+/* <<< Auth <<< */
 
 /***********************************************************************
 

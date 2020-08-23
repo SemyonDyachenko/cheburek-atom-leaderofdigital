@@ -18,9 +18,88 @@
     <section id="content" class="container jc-sb maket__grid">
         <div id="main-content">
             <div class="section-item" id="recent-events">
-                <div class="section-title">Последение мероприятия</div>
+                <?php if(!empty($_COOKIE['user_id'])) { ?>
+                    <div class="section-addnew"><a href="new.php">Новое событие</a><</div>
+         
+                <?php } 
+                    else { ?>
+            <div class="section-addnew"><a class="addnew-meetup" href="new.php">Новое событие</a></div>     
+                <?php } ?>
+                
+                <div class="section-title">Последние события</div>
                 <div class="section-content">
-                    <article>
+                    <?php
+                    //include 'conf/db_conn.php';
+                    //$conn = mysqli_connect($host,$username,$password,$dbname) or die(mysqli_error($conn));
+    function placeMitUps(){
+    $mitups = mysqli_query(mysqli_connect('localhost','u787959094_cheburek','u787959094_chebureK','u787959094_cheburek'), 'SELECT * FROM mitUps') or die(mysqli_error(mysqli_connect('localhost','u787959094_cheburek','u787959094_chebureK','u787959094_cheburek')));
+    $mitUps = mysqli_fetch_assoc($mitups);
+    $content = '';
+    //echo 1;
+    foreach($mitUps as $key=>$value){
+        if($key == 'name'){
+            $content.='<article>
+                        <div class="title">'.$value.'</div>
+                        <div class="event-info">
+                            <div class="event-info__item type">
+                                <div class="name">Тип мероприятия:</div>
+                                <div class="value">';
+        }
+        if($key == 'type'){
+            $content .= $value.'</div>
+                            </div>
+                            <div class="event-info__item sponsor">
+                                <div class="name">Организатор:</div>
+                                <div class="value">';
+        }
+        if($key == 'organisedBy'){
+            $content .= $value.'</div>
+                            </div>
+                            <div class="event-info__item description">
+                                <div class="name">Описание:</div>
+                                <div class="value">';
+        }
+        if($key == 'descr'){
+            $content .= $value.'</div>
+                            </div>
+                            <div class="event-info__item location">
+                                <div class="name">Место проведения:</div>
+                                <div class="value">';
+        }
+        if($key == 'place'){
+            $content .= $value.'</div>
+                            </div>
+                            <div class="event-info__item appointment-date">
+                                <div class="name">Назначенная дата:</div>
+                                <div class="value">';
+        }
+        if($key == 'date'){
+            $content .= $value.'</div>
+                            </div>
+                        </div>
+                        <div class="bottom container jc-sb ai-c">
+                            <a href="#" class="respond"';
+        }
+        if($key == 'id'){
+            $content .= ' id="'.$value.'">Откликнуться</a>
+                            <p>';
+        }
+        if($key == 'placementDate'){
+            $content .= $value.'</p>
+                        </div>
+                    </article>';
+        }
+        
+                    /*if(!($mitUps['name']!='')){
+                        break;
+                    }*/
+    }
+    echo $content;
+}
+placeMitUps();
+                    ?>
+                    
+                    <!--<article>
                         <div class="title">Митап фанатов футбольного клуба 'Сочи' в Краснодаре 21 июня. Приходите все</div>
                         <div class="event-info">
                             <div class="event-info__item type">
@@ -138,7 +217,7 @@
                             <a href="#" class="respond">Откликнуться</a>
                             <p>23.08.2020 в 17:09</p>
                         </div>
-                    </article>
+                    </article>-->
 
 
 
